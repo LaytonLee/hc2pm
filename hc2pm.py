@@ -125,7 +125,9 @@ def hc2pm_collection(collection_name, hc_path):
    
     pm_req_data:list = None
     if os.path.isfile(hc_path):
-        pm_req_data = hc2pm_file(hc_path)
+        file_path, file_fullname = os.path.split(hc_path)
+        file_name, file_ext = os.path.splitext(file_fullname)
+        pm_req_data = hc2pm_file(hc_path, file_name)
 
     if os.path.isdir(hc_path):
         pm_req_data = hc2pm_dir(hc_path)
