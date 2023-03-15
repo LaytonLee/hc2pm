@@ -11,5 +11,5 @@ python hc2pm.python -i httpcanary_requests/ -c postman_collection -o result.json
 
 - `-h`: 查看帮助
 - `-i`: 待转换文件/目录，必须
-- `-c`: postman中的collection名称
-- `-o`: 结果输出文件
+- `-c`: postman中的collection名称，必须
+- `-o`: 结果输出文件，必须
